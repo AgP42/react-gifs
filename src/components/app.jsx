@@ -4,6 +4,8 @@ import giphy from 'giphy-api';
 import SearchBar from './search_bar.jsx';
 import Gif from './gif.jsx';
 import GifList from './gif_list.jsx';
+import GifUrl from './gif_url.jsx';
+
 
 const GIPHY_API_KEY = '1KMPHCBIOe3hOjJwCJQX49sRc6cM0oIm';
 
@@ -44,6 +46,7 @@ class App extends Component {
           <SearchBar searchFunction={this.search} />
           <div className="selected-gif">
             <Gif id={this.state.selectedGifId} />
+            <GifUrl id={this.state.selectedGifId} />
           </div>
         </div>
         <div className="right-scene">
